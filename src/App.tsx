@@ -77,12 +77,13 @@ const BACKGROUND_FADE_START = Math.max(
 );
 
 const TYPED_LINES = [
-  "> tina",
-  "...",
-  "> today is your birthday",
-  "...",
-  "> so i made you this computer program",
-  "...",
+  "> Name: Sandra",
+  "...getting data ->   DOB: 19 Dec",
+  "> Intialising birthday",
+  "٩(◕‿◕)۶ ٩(◕‿◕)۶",
+  "> made you this little website",
+  " msg from me : Happy Birthday:",
+  " Loading Surprises.....",
   "٩(◕‿◕)۶ ٩(◕‿◕)۶ ٩(◕‿◕)۶"
 ];
 const TYPED_CHAR_DELAY = 100;
@@ -266,7 +267,7 @@ function AnimatedScene({
       <group ref={tableGroup}>
         <Table />
         <PictureFrame
-          image="/frame2.jpg"
+          image="/frame2.png"
           position={[0, 0.735, 3]}
           rotation={[0, 5.6, 0]}
           scale={0.75}
@@ -559,13 +560,16 @@ export default function App() {
             activeCardId={activeCardId}
             onToggleCard={handleCardToggle}
           />
-          <ambientLight intensity={(1 - environmentProgress) * 0.8} />
-          <directionalLight intensity={0.5} position={[2, 10, 0]} color={[1, 0.9, 0.95]}/>
+          <ambientLight intensity={(1 - environmentProgress) * 1.2} />
+          <directionalLight intensity={1.2} position={[2, 10, 4]} color={[1, 0.95, 0.9]}/>
+          {/* <directionalLight intensity={0.5} position={[2, 10, 0]} color={[1, 0.9, 0.95]}/> */}
           <Environment
             files={["/shanghai_bund_4k.hdr"]}
             backgroundRotation={[0, 3.3, 0]}
             environmentRotation={[0, 3.3, 0]}
             background
+            //environmentIntensity={0.6 * environmentProgress}
+            //backgroundIntensity={0.25 * environmentProgress}
             environmentIntensity={0.1 * environmentProgress}
             backgroundIntensity={0.05 * environmentProgress}
           />
