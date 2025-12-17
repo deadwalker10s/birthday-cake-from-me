@@ -564,7 +564,7 @@ export default function App() {
           <directionalLight intensity={1.2} position={[2, 10, 4]} color={[1, 0.95, 0.9]}/>
           {/* <directionalLight intensity={0.5} position={[2, 10, 0]} color={[1, 0.9, 0.95]}/> */}
           <Environment
-            files={["shanghai_bund_4k.hdr"]}
+            //files={["shanghai_bund_4k.hdr"]}
             backgroundRotation={[0, 3.3, 0]}
             environmentRotation={[0, 3.3, 0]}
             background
