@@ -26,7 +26,7 @@ const clamp = (value: number, min: number, max: number) =>
 const lerp = (from: number, to: number, t: number) => from + (to - from) * t;
 
 const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
-
+console.log("APP RENDERED");
 type AnimatedSceneProps = {
   isPlaying: boolean;
   onBackgroundFadeChange?: (opacity: number) => void;
